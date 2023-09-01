@@ -620,7 +620,7 @@ perm_discussion: 讨论
 perm_general: 一般
 perm_homework: 作业
 perm_problem_solution: 题解
-perm_problem: 题库
+perm_problem: 问题集
 perm_record: 记录
 perm_training: 训练
 Permission Control: 权限控制
@@ -651,7 +651,7 @@ Problem Category: 标签
 Problem Data: 题目数据
 Problem ID cannot be a pure number. Leave blank if you want to use numberic id.: 题目ID不能为纯数字。 若要自动分配数字ID请将此处留空。
 Problem ID List: 题目 ID 列表
-Problem Set: 题库
+Problem Set: 问题集
 Problem Settings: 题目设置
 Problem Solution List: 题解列表
 Problem Solution: 题解列表
@@ -662,7 +662,7 @@ problem_config: 评测设置
 problem_create: 创建题目
 problem_edit: 编辑题目
 problem_import: 导入题目
-problem_main: 题库
+problem_main: 问题集
 problem_solution: 题解
 problem_submit: 递交代码
 problem_type.default: 传统题
@@ -680,7 +680,7 @@ problem.import.input_format: '## 输入格式'
 problem.import.limit_and_hint: '## 限制'
 problem.import.output_format: '## 输出格式'
 problem.import.problem_description: '## 题目描述'
-Problems Sets: 题库
+Problems Sets: 问题集
 Problems: 题目
 Processing...: 处理中...
 Profile Background Image: 背景图片
