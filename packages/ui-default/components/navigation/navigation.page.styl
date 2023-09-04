@@ -7,14 +7,17 @@
   top: 0
   width: 100%
   height: rem($nav-item-height)
-  font-size: rem($font-size-secondary)
+  // font-size: rem($font-size-secondary)
+  font-size: 16px
   transition: background .2s
-  transition-timing-function: ease-out-cubic
+  // transition-timing-function: ease-out-cubic
   z-index: 500
-  background: rgba(#FFF, 0.98)
+  // background: rgba(#FFF, 0.98)
+  background-color: #fff
 
   .nav__item
-    color: $text-1-color
+    // color: $text-1-color
+    color: #000
     &.nav--active
       color: $nav-item-active-color
       font-weight: 700;
@@ -28,8 +31,15 @@
         box-shadow: none
 
   .nav__item--round
-    border-color: $primary-color
-    color: $primary-color
+    // border-color: $primary-color
+    // color: $primary-color
+    width: 90px
+    // height: 40px
+    border-radius: 9px
+    background: #4540E1
+    text-align: center
+    line-height: 32px
+    margin-top: 0.225rem
 
     &:hover
       background-color: $primary-color
