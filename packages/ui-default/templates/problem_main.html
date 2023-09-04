@@ -2,16 +2,16 @@
 {% import "components/problem.html" as problem with context %}
 {% extends "layout/basic.html" %}
 {% block content %}
-  <div class="row">
+  <div class="row area-style">
     <div class="medium-9 columns">
       <div class="section display-mode">
         <div class="section__body no-padding">
           <form method="get" id="searchForm" action="{{ url('problem_main') }}">
             <div class="search">
-              <input name="q" type="text" value="{{ qs }}" placeholder="{{ _('Search') }}">
-              {% include "partials/problem_stat.html" %}
+              <input class="search-input" name="q" type="text" value="{{ qs }}" placeholder="搜索一下">
+              {# {% include "partials/problem_stat.html" %} #}
               <button type="submit">
-                <span class="icon icon-search"></span>
+                <span class="icon icon-search search-icon"></span>
               </button>
             </div>
           </form>
