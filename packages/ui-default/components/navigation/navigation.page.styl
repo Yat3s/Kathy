@@ -6,14 +6,18 @@
   left: 0
   top: 0
   width: 100%
-  height: rem($nav-item-height)
+  height: 100px
   // font-size: rem($font-size-secondary)
   font-size: 16px
+  line-height: 80px
   transition: background .2s
   // transition-timing-function: ease-out-cubic
   z-index: 500
   // background: rgba(#FFF, 0.98)
   background-color: #fff
+  display: flex
+  justify-content: space-between
+  align-items: center
 
   .nav__item
     // color: $text-1-color
@@ -22,11 +26,11 @@
       color: $nav-item-active-color
       font-weight: 700;
       &:before
-        box-shadow: 0 0 30px $nav-item-active-color,
-                    0 0 30px $nav-item-active-color
+        // box-shadow: 0 0 30px $nav-item-active-color,
+        //             0 0 30px $nav-item-active-color
     &:hover
-      border-color: $nav-item-hover-color
-      background: #F8F8F8
+      // border-color: $nav-item-hover-color
+      // background: #F8F8F8
       &:before
         box-shadow: none
 
@@ -34,12 +38,12 @@
     // border-color: $primary-color
     // color: $primary-color
     width: 106px
-    // height: 40px
+    height: 50px
+    // text-align: center
     border-radius: 9px
     background: #4540E1
     text-align: center
-    line-height: 32px
-    margin-top: 0.225rem
+    line-height: 48px
 
     &:hover
       background-color: $primary-color
@@ -58,6 +62,7 @@
 
 .nav > .row
   transition: max-width .5s ease-out-cubic
+  width: 100%
 
 .nav--shadow
   position: fixed
@@ -83,6 +88,7 @@
   display: block
   line-height: rem($nav-item-height - 6)
   padding: rem(0 20px 3px 20px)
+  margin-right: rem(10px)
   border-top: 3px solid transparent
   color: #000
   transition: border-color .2s, background .2s, color .2s
@@ -101,7 +107,7 @@
     color: #000
 
   &.nav--active
-    border-color: $nav-item-active-immersive-color
+    // border-color: $nav-item-active-immersive-color
     &:before
       box-shadow: 0 0 30px #FFF,
                   0 0 30px #FFF,
@@ -109,8 +115,8 @@
 
   &:hover
     text-decoration: none
-    border-color: lighten($nav-item-hover-color, 60%)
-    background: rgba(#FFF, 0.3)
+    // border-color: lighten($nav-item-hover-color, 60%)
+    // background: rgba(#FFF, 0.3)
 
 
 .nav__list--secondary
@@ -149,8 +155,9 @@
 
 .nav__logo
   display: block
-  height: rem($nav-logo-height)
-  margin: rem((($nav-item-height - $nav-logo-height) / 2) 5px)
+  height: rem($nav-logo-height-size)
+  margin: rem((($nav-logo-height-size - $nav-logo-height) / 2) 5px)
+  margin-right: rem(30px)
 
   &:hover
     text-decoration: none
@@ -191,7 +198,7 @@
       line-height: inherit
 
     &.nav--active
-      border-color: $nav-item-active-color
+      // border-color: $nav-item-active-color
 
     &:visited, &:active
       background: none
@@ -222,4 +229,16 @@
       display: none
 
   .nav__list--secondary
-    border-top: 1px solid #666
+    // border-top: 1px solid #666
+
+.dashboard
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-left: rem(180px)
+
+.nav-flex
+  display: flex
+  flex: 1
+  justify-content: space-between
+  align-items: center

@@ -7,8 +7,8 @@
 {%- endmacro -%}
 
 <nav class="nav slideout-menu" id="menu">
-  <div class="row"><div class="columns clearfix">
-    <ol class="nav__list nav__list--main clearfix">
+  <div class="row"><div class="columns clearfix nav-flex">
+    <ol class="nav__list nav__list--main clearfix nav-title">
       <li class="nav__list-item">
         <a href="/"><img class="nav__logo" src="{{ UiContext.domain.nav_logo_dark or UiContext.nav_logo_dark }}"></a>
       </li>
@@ -16,7 +16,7 @@
         {{ nav_item(item) }}
       {% endif %}{%- endfor -%}
     </ol>
-    <ol class="nav__list nav__list--secondary clearfix">
+    <ol class="nav__list nav__list--secondary clearfix dashboard">
     {% if not handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
       <li class="nav__list-item"><a href="{{ url('user_login') }}" class="nav__item login-color" name="nav_login">{{ _('Login') }}</a></li>
       <li class="nav__list-item"><a href="{{ url('user_register') }}" class="nav__item--round">{{ _('Sign Up') }}</a></li>
