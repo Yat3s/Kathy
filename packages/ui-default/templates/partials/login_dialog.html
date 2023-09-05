@@ -3,7 +3,7 @@
     <div class="dialog--signin__bg">
       <div class="dialog--signin__side">
         <h1>{{ _("Don't have an account?") }}</h1>
-        <p>{{ _('By signing up a {0} universal account, you can submit code and join discussions in all online judging services provided by us.').format((handler.domain|default({ui:[]})).ui.name|default(model.system.get('server.name'))) }}</p>
+        <p>{{ _('注册一个 U+ 通用账户，您就可以在我们提供的所有在线评测服务上提交代码、参与讨论。').format((handler.domain|default({ui:[]})).ui.name|default(model.system.get('server.name'))) }}</p>
         <div><a href="{{ url('user_register') }}" class="inverse rounded button">{{ _('Sign Up Now') }}</a></div>
       </div>
     </div>
@@ -13,7 +13,7 @@
           <a name="dialog--signin__close" href="javascript:;">{{ _('CLOSE') }}</a>
         </div>
         <h1 class="dialog--signin__title">{{ _('SIGN IN') }}</h1>
-        <p class="dialog--signin__note">{{ _('Using your {0} universal account').format(model.system.get('server.name')) }}</p>
+        <p class="dialog--signin__note">{{ _('使用您的 U+ 通用账户').format(model.system.get('server.name')) }}</p>
         {% if model.system.get('server.login') %}
         <div class="row"><div class="columns">
           <label class="material textbox">
