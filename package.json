@@ -67,6 +67,7 @@
         "stylus": "^0.59.0",
         "stylus-loader": "7.1.2",
         "supertest": "^6.3.3",
+        "tailwindcss": "^3.3.3",
         "ts-loader": "^9.4.4",
         "typescript": "5.0.2",
         "webpack": "^5.88.2",

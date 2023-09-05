@@ -3,8 +3,8 @@
 {% import "components/contest.html" as contest with context %}
 {% import "components/problem.html" as problem with context %}
 {% block content %}
-<div class="row">
-  {% for column in contents %}
+<div class="row area-style">
+  {# {% for column in contents %}
     <div class="large-{{ column.width }} columns">
       {% for s in column.sections %}
         {% if templateExists("partials/homepage/" + s[0] + ".html") %}
@@ -16,6 +16,67 @@
         {% endif %}
       {% endfor %}
     </div>
-  {% endfor %}
-</div>
+  {% endfor %} #}
+  <div class="flex flex-row content">
+    <div class="home-left">
+      <div class="circle">
+        <img src="{{ UiContext.cdn_prefix }}img/ic_circle.svg" width="336" height="336">
+      </div>
+      <div class="container">
+        <div>
+          <span class="text-one">U+让信奥</span>
+          <span class="text-two">学习</span>
+        </div>
+        <div class="text-three space">变得</div>
+        <div class="space">
+          <span class="text-three">更</span>
+          <span class="text-five">简单</span>
+        </div>
+        <div class="text-intro space">提供 ACM/OI Online Judge，涵盖丰富的测试题， 也可以进行线上比赛和训练。</div>
+        <div class="function">
+          <button class="start">开始做题</button>
+          <button class="apply">机构报名</button>
+        </div>
+      </div>
+    </div>
+    {% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
+    <div class="home-right">
+      <img src="{{ UiContext.cdn_prefix }}img/img_home_right_active.svg" width="512" height="468">
+    </div>
+    {% else %}
+    <div class="home-right">
+      <img src="{{ UiContext.cdn_prefix }}img/img_home_right.svg" width="512" height="468">
+    </div>
+    {% endif %}
+  </div>
+  <div class="flex flex-row background">
+    <div class="item flex flex-row">
+      <img src="{{ UiContext.cdn_prefix }}img/icon_tasks.svg" width="80" height="80">
+      <div class="item-text flex flex-col">
+        <div class="title">100000+</div>
+        <div class="desc">算法测试题</div>
+      </div>
+    </div>
+    <div class="item flex flex-row">
+      <img src="{{ UiContext.cdn_prefix }}img/icon_codes.svg" width="80" height="80">
+      <div class="item-text flex flex-col">
+        <div class="title">20+</div>
+        <div class="desc">编程语言支持</div>
+      </div>
+    </div>
+    <div class="item flex flex-row">
+      <img src="{{ UiContext.cdn_prefix }}img/icon_games.svg" width="80" height="80">
+      <div class="item-text flex flex-col">
+        <div class="title">ACM/OI</div>
+        <div class="desc">赛制支持</div>
+      </div>
+    </div>
+    <div class="item flex flex-row">
+      <img src="{{ UiContext.cdn_prefix }}img/icon_messages.svg" width="80" height="80">
+      <div class="item-text flex flex-col">
+        <div class="title">在线讨论</div>
+        <div class="desc">向高手学习</div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
