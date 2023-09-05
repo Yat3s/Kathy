@@ -11,7 +11,8 @@
               <input class="search-input" name="q" type="text" value="{{ qs }}" placeholder="搜索一下">
               {# {% include "partials/problem_stat.html" %} #}
               <button type="submit">
-                <span class="icon icon-search search-icon"></span>
+                {# <span class="icon icon-search search-icon"></span> #}
+                <img src="{{ UiContext.cdn_prefix }}img/icon_search.svg" width="20" height="20">
               </button>
             </div>
           </form>
