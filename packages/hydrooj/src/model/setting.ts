@@ -242,8 +242,8 @@ SystemSetting(
     Setting('setting_smtp', 'smtp.secure', false, 'boolean', 'smtp.secure', 'SSL'),
     Setting('setting_smtp', 'smtp.verify', true, 'boolean', 'smtp.verify', 'Verify register email'),
     Setting('setting_server', 'server.center', 'https://hydro.ac/center', 'text', 'server.center', '', FLAG_HIDDEN),
-    Setting('setting_server', 'server.name', 'Hydro', 'text', 'server.name', 'Server Name'),
-    Setting('setting_server', 'server.displayName', 'Hydro', 'text', 'server.name', 'Server Name (Global Display)', FLAG_PRO),
+    Setting('setting_server', 'server.name', 'U+', 'text', 'server.name', 'Server Name'),
+    Setting('setting_server', 'server.displayName', 'U+', 'text', 'server.name', 'Server Name (Global Display)', FLAG_PRO),
     Setting('setting_server', 'server.url', '/', 'text', 'server.url', 'Server BaseURL'),
     Setting('setting_server', 'server.upload', '256m', 'text', 'server.upload', 'Max upload file size'),
     Setting('setting_server', 'server.cdn', '/', 'text', 'server.cdn', 'CDN Prefix'),
@@ -335,7 +335,7 @@ export async function apply(ctx: Context) {
         for (const key in langs) range[key] = langs[key].display;
         LangSettingNode.range = range;
         ServerLangSettingNode.range = range;
-    } catch (e) { /* Ignore */ }
+    } catch (e) { /* Ignore */ }    
     ctx.on('system/setting', (args) => {
         if (!args.hydrooj?.langs) return;
         Object.assign(langs, parseLang(args.hydrooj.langs));
