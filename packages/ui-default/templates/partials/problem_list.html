@@ -27,7 +27,7 @@
         </th>
         <th class="col--pid display-mode-hide">{{ _('ID') }}</th>
         {% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
-          <th class="col--status record-status--border edit-mode-hide">{{ _('Status') }}</th>
+          <th class="col--status record-status--border edit-mode-hide text-black font-medium text-md">{{ _('Status') }}</th>
         {% endif %}
         <th class="col--name text-black font-medium text-md">{{ _('Problem') }}
           <span class="nojs--hide toggle-tag tag--hide">{{ _('Show tags') }}</span>
