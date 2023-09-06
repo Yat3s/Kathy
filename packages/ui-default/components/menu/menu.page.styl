@@ -27,7 +27,7 @@
   position: relative
 
   &.highlight
-    background: mix($highlight-color, #FFF, 10%)
+    // background: mix($highlight-color, #FFF, 10%)
 
   &.expandable:after
     font-family: $icon-font-name
@@ -50,10 +50,11 @@ a.menu__link, button.menu__link
     opacity: 0.5
   &:hover
     text-decoration: none
+    // border: none
   &:not(.disabled):hover
     color: $text-1-color
-    background: $menu-item-bg-color-hover
-    border-color: darken($primary-color, 10%)
+    // background: $menu-item-bg-color-hover
+    // border-color: darken($primary-color, 10%)
   &.active, &.active:hover
     border-color: darken($secondary-color, 30%)
     background: $secondary-color
