@@ -7,7 +7,7 @@
     {% if handler.user.hasPriv(model.builtin.PRIV.PRIV_CREATE_DOMAIN) %}
       <a class="primary rounded button" href="{{ url('home_domain_create') }}"><span class="icon icon-add"></span> {{ _('Create Domain') }}</a>
     {% endif %}
-      <a class="tool-button" href="{{ url('wiki_help', anchor='domain') }}"><span class="icon icon-help"></span> {{ _("What's domain?") }}</a>
+      {# <a class="tool-button" href="{{ url('wiki_help', anchor='domain') }}"><span class="icon icon-help"></span> {{ _("What's domain?") }}</a> #}
     </div>
   </div>
   <div class="section__body no-padding">
