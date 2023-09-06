@@ -36,7 +36,7 @@ All {0} Contests: 所有 {0} 比賽
 All Contests: 所有比賽
 All Homeworks: 所有功課
 All: 全部
-Always granted all privileges: 總是擁有所有域許可權
+Always granted all privileges: 總是擁有所有网站許可權
 An error has occurred.: 發生了一個錯誤。
 API: API
 Arguments: 參數
@@ -95,7 +95,7 @@ Create contests: 創建比賽
 Create Discussion in {0}: 在 {0} 下創建討論
 Create Discussion: 創建討論
 Create discussions: 創建討論
-Create Domain: 創建域
+Create Domain: 創建网站
 Create homework: 創建功課
 Create Homework: 創建功課
 Create problem solutions: 創建題解
@@ -104,7 +104,7 @@ Create problems: 創建題目
 Create Role: 創建角色
 Create Training Plan: 創建訓練計劃
 Create: 創建
-current domain: 當前域
+current domain: 當前网站
 Current Email: 當前電子郵件
 Current Location: 當前位置
 Current password doesn't match.: 當前密碼輸入錯誤。
@@ -144,9 +144,9 @@ discussion_node: 討論
 Discussions: 討論
 Do not discuss solutions otherwise you will be regarded as cheating and then lose qualifications.: 請勿討論解法，否則以作弊論處並且將失去參賽資格。
 Document {2} not found.: 文件 {2} 不存在。
-Domain {0} already exists.: 域 {0} 已經存在。
-Domain {0} is bulit-in and cannot be modified.: 域 {0} 為內建，不可修改。
-Domain {0} not found.: 域 {0} 不存在。
+Domain {0} already exists.: 网站 {0} 已經存在。
+Domain {0} is bulit-in and cannot be modified.: 网站 {0} 為內建，不可修改。
+Domain {0} not found.: 网站 {0} 不存在。
 Domain ID cannot be changed once the domain is created.: 在創建後不能更改 ID。
 domain_main: 首頁
 Don't have an account?: 還沒有賬戶？
@@ -155,11 +155,11 @@ Download: 下載
 Duration (hours): 持續時間 (小時)
 Duration: 持續時間
 Edit any homework: 修改任意功課
-Edit description of this domain: 修改此域描述
+Edit description of this domain: 修改此网站描述
 Edit discussion replies of own discussion: 修改自己討論中的回覆
 Edit discussion replies: 修改討論的回覆
 Edit discussions: 修改討論
-Edit Domain: 編輯域
+Edit Domain: 編輯网站
 Edit Homework: 編輯功課
 Edit own discussion replies: 修改討論中自己的回覆
 Edit own discussions: 修改自己的討論
@@ -192,7 +192,7 @@ Formula blocks: 公式區塊
 Gender Visibility: 性別可見性
 Gender: 性別
 Hard Deadline: 最終截止時間
-Have ALL PERMISSIONS in this domain: 在此域中擁有全部許可權
+Have ALL PERMISSIONS in this domain: 在此网站中擁有全部許可權
 Help: 幫助
 Hidden: 隱藏
 Hide all tags: 隱藏所有標籤
@@ -200,9 +200,9 @@ Hide categorical tags: 隱藏分類標籤
 Highlight discussions: 高亮討論
 Highlight: 高亮
 home_account: 賬戶設定
-home_domain_account: 當前域的設定
-home_domain_create: 創建域
-home_domain: 我的域
+home_domain_account: 當前网站的設定
+home_domain_create: 創建网站
+home_domain: 我的网站
 home_messages: 站內訊息
 home_preference: 偏好設定
 home_security: 安全設定
@@ -251,9 +251,9 @@ Logout This Session: 登出該會話
 Logout: 登出
 Lost Password: 忘記密碼
 manage_dashboard: 概況
-manage_domain: 管理域
-manage_edit: 編輯域資料
-manage_join_applications: 加域申請
+manage_domain: 管理网站
+manage_edit: 編輯网站資料
+manage_join_applications: 加网站申請
 manage_permission: 管理許可權
 manage_role: 管理角色
 manage_user: 管理使用者
@@ -264,7 +264,7 @@ Memory: 記憶體
 Message {0} not found.: 訊息 {0} 不存在。
 Messages: 訊息
 Most Upvoted Solutions: 最熱題解
-My Domains: 我的域
+My Domains: 我的网站
 My Profile: 我的資料
 My Recent Submissions: 我最近的遞交記錄
 My Role: 我的角色
@@ -407,7 +407,7 @@ Select a node to create discussion.: 選擇一個節點來發表討論。
 Select a role: 選擇一個角色
 Select User: 選擇使用者
 Selected roles have been deleted.: 所選角色已刪除。
-Selected users have been removed from the domain.: 所選使用者已從此域中移除。
+Selected users have been removed from the domain.: 所選使用者已從此网站中移除。
 Send Code after acceptance: 通過題目後傳送原始碼
 Send Password Reset Email: 傳送密碼重置郵件
 Send Verification Email: 傳送驗證郵件
@@ -506,9 +506,9 @@ User-defined role: 使用者定義的角色
 User: 使用者
 Username / UID: 使用者名或 UID
 Username: 使用者名
-Users with those roles will be removed from the domain.: 擁有這些角色的使用者將從此域中移除。
+Users with those roles will be removed from the domain.: 擁有這些角色的使用者將從此网站中移除。
 Users: 使用者
-Valid for registered users who are not members of the domain: 對域外註冊使用者有效
+Valid for registered users who are not members of the domain: 對网站外註冊使用者有效
 Valid for visitors: 對未登入的遊客有效
 View contest scoreboard: 檢視比賽成績表
 View Contest: 檢視比賽
@@ -526,7 +526,7 @@ View Owned Training Plans: 檢視自己的訓練計劃
 View problem solutions: 檢視題解
 View Problem: 檢視題目
 View problems: 檢視題目
-View this domain: 檢視此域
+View this domain: 檢視此网站
 View training: 檢視訓練
 View: 檢視
 Visible to registered users: 對註冊使用者可見
@@ -536,8 +536,8 @@ Vote: 投票
 We will check code similarity after this contest.: 我們會在賽後檢查程式碼相似度。
 WeChat Visibility: 微信可見性
 WeChat: 微信
-What is domain?: 什麼是域?
-What's domain?: 什麼是域？
+What is domain?: 什麼是网站?
+What's domain?: 什麼是网站？
 Whether to show tags in the problem list.: 是否在題目列表中顯示題目的標籤。
 Will be used as the domain icon.: 將被用作圖示。
 Without slashes or backslashes: 不含斜槓和反斜槓
@@ -545,11 +545,11 @@ Write Your Comment: 發表您的評論
 Write Your Solution: 發表您的題解
 You can create your own training plans and share them with others.: 您可以創建您自己的訓練計劃並且與他人分享。
 You cannot submit for this problem because the homework's deadline is due.: 功課已到達截止時間，您無法遞交了。
-You don't have the required permission ({0}) in this domain.: 您在該域中無相應許可權 ({0})。
+You don't have the required permission ({0}) in this domain.: 您在該网站中無相應許可權 ({0})。
 You don't have the required privilege.: 您沒有相應的特權。
-You don't own any domain and don't have privilege to create domain.: 您不擁有任何域也沒有創建域的特權。
+You don't own any domain and don't have privilege to create domain.: 您不擁有任何网站也沒有創建网站的特權。
 You have not submitted any solutions for this problem: 您在該題下沒有遞交過任何解答
-You have permission to create problems for this domain.: 您有許可權為此域創建題目。
+You have permission to create problems for this domain.: 您有許可權為此网站創建題目。
 You haven't attended this contest yet.: 您還沒有參加本次比賽。
 You haven't claimed this homework yet.: 您還未認領該功課。
 You're not logged in.: 您沒有登入。
