@@ -23,6 +23,7 @@ import 'vj/misc/slideout.styl';
 import 'vj/misc/.iconfont/webicon.styl';
 import 'vj/misc/immersive.styl';
 import 'vj/misc/structure.styl';
+import 'vj/misc/tailwindstylus.styl';
 import 'vj/misc/section.styl';
 import 'vj/misc/nothing.styl';
 import 'vj/components/editor/cmeditor.styl';
