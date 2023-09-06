@@ -5,16 +5,16 @@
 <div class="row">
   <div class="medium-9 columns">
     <div class="section">
-      <div class="section__header">
+      {# <div class="section__header">
         <h1 class="section__title">{{ _('Homework Introduction') }}</h1>
-      </div>
+      </div> #}
       <div class="section__body typo">
         {{ tdoc['content']|markdown|safe }}
       </div>
     </div>
     <div class="section">
       <div class="section__header">
-        <h1 class="section__title">{{ _('Problem') }}</h1>
+        <h1 class="section__title font-bold">{{ _('Problem') }}</h1>
       </div>
     {% if pdict %}
       <div class="section__body no-padding">
