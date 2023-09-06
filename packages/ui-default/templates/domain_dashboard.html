@@ -1,7 +1,7 @@
 {% import "components/user.html" as user %}
 {% extends "domain_base.html" %}
 {% block domain_content %}
-{% if domain.bulletin %}
+{# {% if domain.bulletin %}
 <div class="section">
   <div class="section__body typo">
     {{ domain.bulletin|markdown|safe }}
@@ -41,5 +41,5 @@
   </div>
   <div class="section__body"></div>
 </div>
-{% endif %}
+{% endif %} #}
 {% endblock %}
