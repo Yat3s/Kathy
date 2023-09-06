@@ -11,6 +11,8 @@
   tr
     border-top: 1px solid $table-border-color
     border-bottom: 1px solid $table-border-color
+    &:first-child
+      border-top: none
 
     &:nth-child(even)
       background: $table-alternate-bg-color
@@ -51,7 +53,7 @@
 
 .section__table-header
   background: $table-header-bg-color
-  box-shadow: $table-header-shadow
+  // box-shadow: $table-header-shadow
   position: relative
   z-index: 100
   transition: box-shadow .2s linear
@@ -60,7 +62,7 @@
     border-bottom: 0
 
   &.is_stuck
-    box-shadow: $table-header-shadow-floating
+    // box-shadow: $table-header-shadow-floating
 
 .section__table-container,
 .section__body
