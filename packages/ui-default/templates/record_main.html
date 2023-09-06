@@ -14,7 +14,7 @@
     <form method="get">
       <div class="section">
         <div class="section__header">
-          <h1 class="section__title">{{ _('Filter') }}</h1>
+          <h1 class="section__title text-black font-medium">{{ _('Filter') }}</h1>
           <div class="section__tools">
             <button type="submit" class="primary button"><span class="icon icon-filter"></span> {{ _('Filter') }}</button>
             <a href="{{ url('record_main') }}" class="button">{{ _('Reset') }}</a>
@@ -64,7 +64,7 @@
       </div>
     </form>
     <div class="section">
-      <div class="section__body no-padding">
+      <div class="section__body no-padding ml-4">
       {% if not rdocs.length %}
         {% if not filterUidOrName and not filterPid and not filterTid %}
         {{ nothing.render('Oh, there is no task in the queue!') }}
@@ -102,7 +102,7 @@
           </tbody>
         </table>
         {% if handler.user.hasPriv(PRIV.PRIV_VIEW_JUDGE_STATISTICS) or filterTid or filterPid or filterUidOrName %}
-        <ul class="pager">
+        <ul class="pager mt-3">
           <li>
             <a class="pager__item next link" href="?page={{ page + 1 }}{{
               (('&tid=' + filterTid) if filterTid else '')
@@ -117,7 +117,7 @@
       {% endif %}
       </div>
     </div>
-    {% if statistics %}
+    {# {% if statistics %}
     <div class="section">
       <div class="section__header">
         <h1 class="section__title">{{ _('Statistics') }}</h1>
@@ -134,7 +134,7 @@
         </dl>
       </div>
     </div>
-    {% endif %}
+    {% endif %} #}
   </div>
 </div>
 {% endblock %}
