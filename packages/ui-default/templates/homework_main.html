@@ -8,7 +8,7 @@
        <div class="section__header">
           {# <h1 class="section__title">{{ _('All Homeworks') }}</h1> #}
           <div class="section__tools">
-            {# <span class="nojs--hide">
+            <span class="nojs--hide">
               {{ _('View') }}:
               <select class="inline compact select" name="homework_display">
                 <option value="calendar">{{ _('Calendar View') }}</option>
@@ -31,19 +31,17 @@
                 {{ _('Search') }}
               </button>
             </form>
-          {% endif %} #}
+          {% endif %}
           {% if handler.user.hasPerm(perm.PERM_CREATE_HOMEWORK) %}
-            <a class="rounded-lg button border-none" href="{{ url('homework_create') }}">{{ _('Create Homework') }}</a>
+            <a class="compact button" href="{{ url('homework_create') }}">{{ _('Create Homework') }}</a>
           {% endif %}
           </div>
           </div>
-   
-      
-      <div class="section__body no-padding">
+  
+      {# <div class="section__body no-padding">
           <form class="flex items-center justify-start medium-6" method="get" id="searchForm" action="{{ url('homework_main') }}">
             <div class="search items-center flex-1 mr-2">
               <input class="search-input" name="q" type="text" value="{{ qs }}" placeholder="比赛名...">
-              {# {% include "partials/homework.html" %} #}
               <button type="submit">
                 {# <span class="icon icon-search search-icon"></span> #}
                 <img src="{{ UiContext.cdn_prefix }}img/icon_search.svg" width="20" height="20">
@@ -53,13 +51,9 @@
               显示所有作业比赛
               </button>
           </form>
-        </div>
+        </div> #}
 
-        {{ paginator.render(page, tpcount, add_qs=qs) }}
-
-
-
-      <div class="section__body no-padding">
+      <div class="section__body no-padding mt-5">
       {% if not tdocs.length %}
         {{ nothing.render('There is no homework so far ╰(*°▽°*)╯') }}
       {% else %}
@@ -94,8 +88,7 @@
         {%- endfor -%}
         </ol>
       #}
-
-        <table class="data-table hide-problem-tag">
+  <table class="data-table hide-problem-tag">
       <colgroup>
         <col class="col--checkbox display-mode-hide">
         <col class="col--pid display-mode-hide">
@@ -110,13 +103,15 @@
     <thead>
       <tr>
         {# <th class="col--pid display-mode-hide">{{ _('ID') }}</th> #}
-        <th class="text-center medium-3 text-black font-medium text-md">{{ _('Homework') }}</th>
-        {#{% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
+        <th class="text-center medium-4 text-black font-medium">{{ _('Homework') }}</th>
+        {# {% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
           <th class="col--status record-status--border edit-mode-hide">{{ _('Status') }}</th>
-        {% endif %}#}
-        <th class="text-center medium-5 text-black font-medium text-md">{{ _('Time') }}</th>
+        {% endif %} #}
+        <th class="text-center medium-3 text-black font-medium">{{ _('Status') }}</th>
+        <th class="text-center medium-3 text-black font-medium">{{ _('Begin Time') }}</th>
+        <th class="text-center medium-3 text-black font-medium">{{ _('End Time') }}</th>
         {# <th class="col--open">{{ _('Open') }}</th> #}
-        <th class="text-center medium-4 text-black font-medium text-md">{{ _('Owner') }}</th>
+        {# <th class="text-center medium-4 text-black font-medium">{{ _('Owner') }}</th> #}
       </tr>
     </thead>
     <tbody>
@@ -133,8 +128,7 @@
             <td class="col--status record-status--border edit-mode-hide"></td>
           {% endif %}
         {% endif %}#}
-
-        <td class="col--name col--problem-name text-center medium-3">
+        <td class="col--name col--problem-name text-center medium-4">
           {#{% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
             <form class="form--inline" action="{{ url('problem_main', domainId = pdoc.domainId) }}" method="post">
               <input type="hidden" name="pid" value="{{ pdoc.docId }}">
@@ -147,18 +141,21 @@
           {% endif %}#}
            <a href="{{ url('homework_detail', tid=tdoc.docId) }}" data-emoji-enabled>{{ tdoc.title }}</a>
         </td>
-        <td class="text-center medium-5">{{ _(model.contest.statusText(tdoc))}} {{ _('Open Since') }}:  {{ datetimeSpan(tdoc['beginAt'])|safe }} 
+        <td class="text-center medium-3">{{ _(model.contest.statusText(tdoc)) }}</td>
+        <td class="text-center medium-3">{{ datetimeSpan(tdoc['beginAt'])|safe }} </td>
+        <td class="text-center medium-3">
                   {% if model.contest.isExtended(tdoc) or model.contest.isDone(tdoc) %}
-                    {{ _('Hard Deadline') }}: {{ datetimeSpan(tdoc['endAt'])|safe }}
+                    {{ datetimeSpan(tdoc['endAt'])|safe }}
                   {% else %}
-                    {{ _('Deadline') }}: {{ datetimeSpan(tdoc['penaltySince'])|safe }}
+                    {{ datetimeSpan(tdoc['penaltySince'])|safe }}
                   {% endif %}</td>
-        <td class="text-center medium-4">{{ tdoc.owner }}</td>
+        {# <td class="text-center medium-4">{{ tdoc.owner }}</td> #}
       </tr>
     {%- endfor -%}
     </tbody>
   </table>
 
+  {{ paginator.render(page, tpcount, add_qs=qs) }}
         <div name="calendar_entry"></div>
       {% endif %}
       </div>
