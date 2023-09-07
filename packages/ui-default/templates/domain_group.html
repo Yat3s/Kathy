@@ -2,13 +2,13 @@
 {% block domain_content %}
 <div class="section">
   <div class="section__header">
-    <h1 class="section__title">{{ _('{0}: Groups').format(domain.name) }}</h1>
+    <h1 class="section__title font-medium">{{ _('Kathy: 小组').format(domain.name) }}</h1>
     <div class="section__tools">
       <button class="primary rounded button" name="create_group">{{ _('Create Group') }}</button>
     </div>
   </div>
   {{ noscript_note.render() }}
-  <div class="section__body no-padding domain-group">
+  <div class="section__body no-padding domain-group mt-4">
     <table class="data-table">
       <colgroup>
         <col class="col--checkbox">

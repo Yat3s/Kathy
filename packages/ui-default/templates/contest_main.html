@@ -56,7 +56,7 @@
   {%- endfor -%}
     <div class="section">
       <div class="section__header">
-        <h1 class="section__title">{{ _('All Contests') if not rule else _('All {0} Contests').format(_(model.contest.RULES[rule].TEXT)) }}</h1>
+        <h1 class="section__title font-medium">{{ _('All Contests') if not rule else _('All {0} Contests').format(_(model.contest.RULES[rule].TEXT)) }}</h1>
         <div class="section__tools">
           <form method="get" name="filter-form">
             {{ _('Show') }}:
@@ -132,7 +132,7 @@
   {% if handler.user.hasPerm(perm.PERM_CREATE_CONTEST) %}
     <div class="section side">
       <div class="section__header">
-        <h1 class="section__title">
+        <h1 class="section__title font-medium">
           {{ _('Create Contest') }}
         </h1>
       </div>
