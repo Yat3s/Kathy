@@ -6,7 +6,7 @@
 </li>
 {%- endmacro -%}
 
-<nav class="nav slideout-menu" id="menu">
+<nav class="nav slideout-menu bg-white" id="menu">
   <div class="row"><div class="columns clearfix nav-flex">
     <ol class="nav__list nav__list--main clearfix nav-title">
       <li class="nav__list-item">
@@ -55,7 +55,7 @@
       </li> #}
     {% endif %}
       <li class="nav__list-item" data-dropdown-pos="bottom right" data-dropdown-custom-class="nav__dropdown" data-dropdown-target="#menu-nav-user" data-dropdown-disabledconstrainToWindow data-dropdown-trigger-desktop-only>
-        <a href="{{ url('user_detail', uid=handler.user._id) }}" class="nav__item"><span class="icon mr-2"><img class="small user-profile-avatar v-center" loading="lazy" src="{{ avatarUrl(UiContext.domain.avatar|default('')) }}" width="20" height="20"></span>{{ handler.user.uname }}</a>
+        <a href="{{ url('user_detail', uid=handler.user._id) }}" class="nav__item"><span class="icon mr-2"><img class="small user-profile-avatar v-center" loading="lazy" src="{{ avatarUrl(udoc.avatar|default('')) }}" width="20" height="20"></span>{{ handler.user.uname }}</a>
         <ol class="dropdown-target menu" id="menu-nav-user">
           <li class="menu__item">
             <a href="{{ url('user_detail', uid=handler.user._id) }}" class="menu__link">
