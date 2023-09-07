@@ -1,7 +1,7 @@
 <form method="post">
 {%- for family, family_settings in settings|groupby('family') -%}{%- if family != 'setting_storage' %}
-  <div class="section__header">
-    <h1 class="section__title" id="{{ family }}" data-heading>{{ _(family) }}</h1>
+  <div class="section__header mb-4">
+    <h1 class="section__title font-medium" id="{{ family }}" data-heading>{{ _(family) }}</h1>
   </div>
   <div class="section__body">
   {%- for setting in family_settings -%}

@@ -44,8 +44,8 @@
   </div>
 </div>
 <div class="section">
-  <div class="section__header">
-    <h1 class="section__title">{{ _('User Privilege') }}</h1>
+  <div class="section__header mb-4">
+    <h1 class="section__title font-medium">{{ _('User Privilege') }}</h1>
     <div class="section__tools">
       <button class="primary rounded button" name="select_user"><span class="icon icon-search"></span>{{ _('Select User') }}</button>
     </div>
@@ -62,11 +62,11 @@
       </colgroup>
       <thead>
         <tr>
-          <th class="col--uid">{{ _('User ID') }}</th>
-          <th class="col--user">{{ _('Username') }}</th>
-          <td class="col--priv_info">{{ _('Privilege') }}</th>
-          <th class="col--priv">{{ _('Value') }}</th>
-          <th class="col--actions">{{ _('Actions') }}</th>
+          <th class="col--uid text-black">{{ _('User ID') }}</th>
+          <th class="col--user text-black">{{ _('Username') }}</th>
+          <td class="col--priv_info text-black">{{ _('Privilege') }}</th>
+          <th class="col--priv text-black">{{ _('Value') }}</th>
+          <th class="col--actions text-black">{{ _('Actions') }}</th>
         </tr>
       </thead>
       {% include "partials/manage_user_priv.html" %}

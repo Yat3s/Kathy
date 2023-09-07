@@ -1,8 +1,8 @@
 {% extends "layout/home_base.html" %}
 {% block home_content %}
 <div class="section">
-  <div class="section__header">
-    <h1 class="section__title">{{ _('My Domains') }}</h1>
+  <div class="section__header mb-4">
+    <h1 class="section__title font-medium">{{ _('My Domains') }}</h1>
     <div class="section__tools">
     {% if handler.user.hasPriv(model.builtin.PRIV.PRIV_CREATE_DOMAIN) %}
       <a class="primary rounded button" href="{{ url('home_domain_create') }}"><span class="icon icon-add"></span> {{ _('Create Domain') }}</a>
