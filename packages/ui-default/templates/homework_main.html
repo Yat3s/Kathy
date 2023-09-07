@@ -33,25 +33,25 @@
             </form>
           {% endif %}
           {% if handler.user.hasPerm(perm.PERM_CREATE_HOMEWORK) %}
-            <a class="compact button" href="{{ url('homework_create') }}">{{ _('Create Homework') }}</a>
+            <a class="compact primary button" href="{{ url('homework_create') }}">{{ _('Create Homework') }}</a>
           {% endif %}
           </div>
           </div>
   
-      {# <div class="section__body no-padding">
+      <div class="section__body no-padding">
           <form class="flex items-center justify-start medium-6" method="get" id="searchForm" action="{{ url('homework_main') }}">
             <div class="search items-center flex-1 mr-2">
               <input class="search-input" name="q" type="text" value="{{ qs }}" placeholder="比赛名...">
               <button type="submit">
                 <span class="icon icon-search search-icon"></span>
-                <img src="{{ UiContext.cdn_prefix }}img/icon_search.svg" width="20" height="20">
+                {# <img src="{{ UiContext.cdn_prefix }}img/icon_search.svg" width="20" height="20"> #}
               </button>
             </div>
             <button type="submit" class="button rounded-lg border-none show_all_homework">
               显示所有作业比赛
               </button>
           </form>
-        </div>  #}
+        </div> 
 
       <div class="section__body no-padding mt-5">
       {% if not tdocs.length %}

@@ -106,7 +106,7 @@
               {{ _('Clone') }}
             </button>
             {% if handler.user.own(tdoc) or handler.user.hasPerm(perm.PERM_EDIT_HOMEWORK) %}
-              <button name="operation" value="delete" type="submit" class="rounded button">
+              <button name="operation" value="delete" type="submit" class="rounded button bg-red text-white">
                 {{ _('Delete') }}
               </button>
             {% endif %}
