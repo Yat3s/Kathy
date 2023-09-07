@@ -20,17 +20,17 @@
       <div class="section__body no-padding">
         <table class="data-table">
           <colgroup>
+            <col class="">
+            <col class="col--problem">
           {% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
-            <col class="col--status">
-            <col class="col--submit-at">
+            <col class="col--status col--problem">
+            <col class="col--submit-at col--problem">
           {% endif %}
-            <col class="col--problem">
-            <col class="col--problem">
           </colgroup>
 
           <thead>
             <tr>
-              <th class="col--status record-status--border text-black font-bold">{{ _('Status') }}</th>
+              <th class="text-black font-bold">{{ _('Alphabetic PID') }}</th>
               <th class="col--problem text-black font-bold">{{ _('Problem') }}</th>
             {% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
               <th class="col--status record-status--border text-black font-bold">{{ _('Status') }}</th>
@@ -43,8 +43,8 @@
           {% set ntdoc = model.contest.isDone(tdoc) or (tsdoc.attend and not model.contest.isNotStarted(tdoc)) %}
           {%- for pid in tdoc.pids -%}
             <tr>
-              <td class="col--problem col--problem-name">{{ String.fromCharCode(65+loop.index0) }}</td>
-              <td class="col--problem col--problem-name">
+              <td class="">{{ String.fromCharCode(65+loop.index0) }}</td>
+               <td class="col--problem col--problem-name">
                 {% if isAdmin and not ntdoc %}
                   {{ problem.render_problem_title(pdict[pid], show_invisible_flag=false, show_tags=false) }}
                 {% else %}
