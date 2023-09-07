@@ -5,7 +5,7 @@ import { Logger } from './logger';
 import { NestKeys } from './typeutils';
 
 const defaultPath = process.env.CI ? '/tmp/file'
-    : process.env.DEFAULT_STORE_PATH || '/Users/levylv/data/file/hydro';
+    : process.env.DEFAULT_STORE_PATH || '/Users/zhangke/data/file/hydro';
 const FileSetting = Schema.intersect([
     Schema.object({
         type: Schema.union([
