@@ -28,7 +28,7 @@
       <thead>
         <tr>
         {%- for column in rows[0] -%}
-          <th class="col--{{ column.type }}">
+          <th class="col--{{ column.type }} text-black font-bold">
           {%- if column.type == 'problem' and column.raw -%}
             <a href="{{ url('problem_detail', pid=column.raw, query={tid:tdoc.docId}) }}" data-tooltip="{{ pdict[column.raw].title }}">
               {{ column.value }}<br />{{ pdict[column.raw].nAccept|default(0) }}/{{ pdict[column.raw].nSubmit|default(0) }}
