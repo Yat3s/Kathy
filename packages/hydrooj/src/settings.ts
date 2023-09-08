@@ -3,9 +3,10 @@ import { nanoid } from 'nanoid';
 import Schema from 'schemastery';
 import { Logger } from './logger';
 import { NestKeys } from './typeutils';
+import * as os from 'os';
 
 const defaultPath = process.env.CI ? '/tmp/file'
-    : process.env.DEFAULT_STORE_PATH || '/Users/zhangke/data/file/hydro';
+    : process.env.DEFAULT_STORE_PATH || `${os.homedir()}/kathy/data/file`;
 const FileSetting = Schema.intersect([
     Schema.object({
         type: Schema.union([
