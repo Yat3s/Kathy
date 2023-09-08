@@ -13,7 +13,7 @@
         "build:watch": "node build/prepare.js && tsc -b --watch",
         "build:ui": "node packages/ui-default/build --gulp && node packages/ui-default/build",
         "build:ui:gulp": "node packages/ui-default/build --gulp",
-        "build:ui:dev": "node packages/ui-default/build --gulp && node --trace-deprecation packages/ui-default/build --dev",
+        "dev": "node packages/ui-default/build --gulp && node --trace-deprecation packages/ui-default/build --dev",
         "build:ui:dev:https": "node packages/ui-default/build --gulp && node --trace-deprecation packages/ui-default/build --dev --https",
         "build:ui:production": "cross-env NODE_OPTIONS=--max_old_space_size=8192 node packages/ui-default/build --gulp && node packages/ui-default/build --production",
         "build:ui:production:webpack": "cross-env NODE_OPTIONS=--max_old_space_size=8192 node packages/ui-default/build --production",
@@ -23,7 +23,7 @@
         "lint:ci": "eslint packages plugins modules --ext .ts,.tsx,.jsx",
         "lint:ui": "yarn workspace @hydrooj/ui-default lint --ext .js,.ts,.jsx,.tsx . --fix",
         "lint:ui:ci": "yarn workspace @hydrooj/ui-default lint --ext .js,.ts,.jsx,.tsx .",
-        "debug": "node --trace-warnings --async-stack-traces --trace-deprecation packages/hydrooj/bin/hydrooj --debug --template",
+        "server": "node --trace-warnings --async-stack-traces --trace-deprecation packages/hydrooj/bin/hydrooj --debug --template --port=2333 --watch",
         "start": "packages/hydrooj/bin/hydrooj",
         "postinstall": "node build/prepare.js",
         "gen-patch": "node -r @hydrooj/utils/lib/register build/gen-patch.ts"
