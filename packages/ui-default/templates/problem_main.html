@@ -9,7 +9,7 @@
           <form method="get" id="searchForm" action="{{ url('problem_main') }}">
             <div class="search">
               <input class="search-input" name="q" type="text" value="{{ qs }}" placeholder="搜索一下">
-              {# {% include "partials/problem_stat.html" %} #}
+              {% include "partials/problem_stat.html" %}
               <button type="submit">
                 {# <span class="icon icon-search search-icon"></span> #}
                 <img src="{{ UiContext.cdn_prefix }}img/icon_search.svg" width="20" height="20">
@@ -90,7 +90,7 @@
           {% include "partials/category.html" %}
         </div>
         <div class="section__body edit-mode-hide">
-          {# {% include "partials/problem_lucky.html" %} #}
+          {% include "partials/problem_lucky.html" %}
         </div>
       </div>
     </div>
