@@ -3,17 +3,22 @@
 .select
   form-styles()
   padding-right: 1.1rem
+  padding-left: 12px
+  height: 2.2rem !important
   background-color: $input-background-color
   background-image: url('~vj/misc/icons/' + $icon-expand_more-file)
-  background-size: 16px 16px
+  background-size: 20px 20px
   background-position: right -1rem center
   background-origin: content-box
   background-repeat: no-repeat
-  outline: $input-outline
-  transition: outline-color .2s, border-color .2s
-  transition-timing-function: ease-out-cubic
+  border-radius: 6px
 
   &:focus
+    border-color: $input-focus-border-color
+    outline: $input-focus-outline
+    outline-offset: 0
+
+  &:hover
     border-color: $input-focus-border-color
     outline: $input-focus-outline
     outline-offset: 0
