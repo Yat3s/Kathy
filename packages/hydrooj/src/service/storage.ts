@@ -13,6 +13,7 @@ import {
     existsSync, remove, stat, writeFile,
 } from 'fs-extra';
 import { lookup } from 'mime-types';
+import { log } from 'console';
 import { Logger } from '../logger';
 import { builtinConfig } from '../settings';
 import { MaybeArray } from '../typeutils';
@@ -289,6 +290,7 @@ class LocalStorageService {
     }
 
     async get(target: string, path?: string) {
+        console.log("Yat3s", target, path);
         target = resolve(this.dir, convertPath(target));
         if (!existsSync(target)) throw new Error('File not found');
         if (path) await copyFile(target, path);

@@ -69,8 +69,8 @@ export function register(cli: CAC) {
         exec('unzip', [filename, '-d', dir], { stdio: 'inherit' });
         exec('mongorestore', [`--uri=${url}`, `--dir=${dir}/dump/hydro`, '--drop'], { stdio: 'inherit' });
         if (fs.existsSync(`${dir}/file`)) {
-            exec('rm', ['-rf', '/data/file/hydro'], { stdio: 'inherit' });
-            exec('bash', ['-c', `mv ${dir}/file/* /data/file`], { stdio: 'inherit' });
+            exec('rm', ['-rf', '/Users/zhiye/data/file/hydro'], { stdio: 'inherit' });
+            exec('bash', ['-c', `mv ${dir}/file/* /Users/zhiye/data/file`], { stdio: 'inherit' });
         }
         fs.removeSync(dir);
         logger.success('Successfully restored.');

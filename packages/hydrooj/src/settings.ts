@@ -1,12 +1,13 @@
+import * as os from 'os';
+
 import yaml from 'js-yaml';
 import { nanoid } from 'nanoid';
 import Schema from 'schemastery';
 import { Logger } from './logger';
 import { NestKeys } from './typeutils';
-import * as os from 'os';
 
 const defaultPath = process.env.CI ? '/tmp/file'
-    : process.env.DEFAULT_STORE_PATH || `${os.homedir()}/kathy/data/file`;
+    : process.env.DEFAULT_STORE_PATH || `/data/file/hydro`;
 const FileSetting = Schema.intersect([
     Schema.object({
         type: Schema.union([
