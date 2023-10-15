@@ -69,8 +69,8 @@
             </label>
           </th> #}
           <th class="col--uid">{{ _('User ID') }}</th>
-          <th class="col--user">{{ _('Username') }}</th>
-          <th class="col--mail">邮箱</th>
+          <th class="col--user" style="width:100px">{{ _('Username') }}</th>
+          <th class="col--mail" style="width:160px">邮箱</th>
           <th class="col--rp">RP 分数</th>
           <th class="col--ac">AC</th>
           <th class="col--submit">提交</th>
@@ -86,10 +86,10 @@
           <td class="col--uid">
             {{ usr._id }}
           </td>
-          <td class="col--user">
+          <td class="col--user" style="width:100px">
             {{ user.render_inline(usr, badge=true) }}
           </td>
-          <td class="col--mail">
+          <td class="col--mail" style="width:160px">
             {{ usr.mail }}
           </td>
           <td class="col--rp">
