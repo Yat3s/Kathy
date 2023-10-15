@@ -59,7 +59,7 @@ class DomainRankHandler extends Handler {
     @query('page', Types.PositiveInt, true)
     async get(domainId: string, page = 1) {
         const [dudocs, upcount, ucount] = await paginate(
-            domain.getMultiUserInDomain(domainId, { uid: { $gt: 1 }, rp: { $gt: 0 } }).sort({ rp: -1 }),
+            domain.getMultiUserInDomain(domainId, { uid: { $gt: 1 } }).sort({ rp: -1 }),
             page,
             100,
         );
@@ -157,6 +157,55 @@ class DomainUserHandler extends ManageHandler {
         this.response.template = 'domain_user.html';
         this.response.body = {
             roles, rudocs, udict, domain: this.domain,
+        };
+    }
+
+    @requireSudo
+    @post('uid', Types.Int)
+    @post('role', Types.Role)
+    async postSetUser(domainId: string, uid: number, role: string) {
+        if (uid === this.domain.owner) throw new ForbiddenError();
+        await Promise.all([
+            domain.setUserRole(domainId, uid, role),
+            oplog.log(this, 'domain.setRole', { uid, role }),
+        ]);
+        this.back();
+    }
+
+    @requireSudo
+    @param('uid', Types.NumericArray)
+    @param('role', Types.Role)
+    async postSetUsers(domainId: string, uid: number[], role: string) {
+        if (uid.includes(this.domain.owner)) throw new ForbiddenError();
+        await Promise.all([
+            domain.setUserRole(domainId, uid, role),
+            oplog.log(this, 'domain.setRole', { uid, role }),
+        ]);
+        this.back();
+    }
+}
+
+class SystemAllUserHandler extends ManageHandler {
+    @requireSudo
+    async get({ domainId }) {
+        if (domainId !== 'system') {
+            throw new ForbiddenError(
+                'Only system domain can view all users',
+            );
+        }
+
+        const [roles] = await Promise.all([
+            domain.getRoles(domainId),
+        ]);
+        const allUsers = (await user.fetchAllUsers()).filter((u) => u._id > 1);
+        // Set gender string for all users
+        allUsers.forEach((u) => {
+            u.genderStr = u.gender === 0 ? "男" : u.gender === 1 ? "女" : "未填写";
+        });
+
+        this.response.template = 'system_all_users.html';
+        this.response.body = {
+            roles, allUsers, domain: this.domain,
         };
     }
 
@@ -367,6 +416,7 @@ export async function apply(ctx: Context) {
     ctx.Route('domain_dashboard', '/domain/dashboard', DomainDashboardHandler);
     ctx.Route('domain_edit', '/domain/edit', DomainEditHandler);
     ctx.Route('domain_user', '/domain/user', DomainUserHandler);
+    ctx.Route('system_all_users', '/domain/allusers', SystemAllUserHandler);
     ctx.Route('domain_permission', '/domain/permission', DomainPermissionHandler);
     ctx.Route('domain_role', '/domain/role', DomainRoleHandler);
     ctx.Route('domain_group', '/domain/group', DomainUserGroupHandler);

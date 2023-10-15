@@ -298,12 +298,13 @@ Domain ID: 网站 ID
 Domain Settings: 网站设置
 domain_dashboard: 管理网站
 domain_discussion: 讨论节点
-domain_edit: 编辑网站资料
-domain_join: 加入网站
+domain_edit: 编辑站点资料
+domain_join: 加入站点
 domain_main: 首页
-domain_permission: 管理权限
-domain_role: 管理角色
-domain_user: 管理用户
+domain_permission: 权限管理
+domain_role: 角色管理
+domain_user: 系统用户管理
+system_all_users: 全站用户管理
 domain: 网站
 Domain: 网站
 Don't have an account?: 还没有账户？
@@ -413,7 +414,7 @@ Hitokoto: 一言
 home_account: 账户设置
 home_domain_account: 当前网站的设置
 home_domain_create: 创建网站
-home_domain: 我的网站
+home_domain: 我的站点
 home_messages: 站内消息
 home_preference: 偏好设置
 home_security: 安全设置
@@ -537,7 +538,7 @@ More: 更多
 Most Upvoted Solutions: 最被赞同的题解
 Move to subtask: 移动到子任务
 Multi Platform Authenticator: 跨平台认证器
-My Domains: 我的网站
+My Domains: 我的站点
 My Files: 我的文件
 My Profile: 我的资料
 My Recent Submissions: 我的最近递交记录

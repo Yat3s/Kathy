@@ -237,6 +237,15 @@ class UserModel {
         return r;
     }
 
+    static async fetchAllUsers(): Promise<User[]> {
+        const udocs = await coll.find({}).toArray();
+        const r: User[] = [];
+        for (const udoc of udocs) {
+            r.push(new User(udoc, {}));
+        }
+        return r;
+    }
+
     @ArgMethod
     static async getByUname(domainId: string, uname: string): Promise<User | null> {
         const unameLower = uname.trim().toLowerCase();

@@ -78,6 +78,7 @@ inject('DomainManage', 'domain_edit', { family: 'Properties', icon: 'info' });
 inject('DomainManage', 'domain_join_applications', { family: 'Properties', icon: 'info' });
 inject('DomainManage', 'domain_role', { family: 'Access Control', icon: 'user' });
 inject('DomainManage', 'domain_user', { family: 'Access Control', icon: 'user' });
+inject('DomainManage', 'system_all_users', { family: 'Access Control', icon: 'user' });
 inject('DomainManage', 'domain_permission', { family: 'Access Control', icon: 'user' });
 inject('DomainManage', 'domain_group', { family: 'Access Control', icon: 'user' });
 

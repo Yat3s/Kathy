@@ -26,6 +26,7 @@ domain_main: Main
 domain_permission: System Permission
 domain_role: System Role
 domain_user: System User
+system_all_users: All Users
 fs_upload: File Upload
 home_account: Account Settings
 home_domain_account: Profile @ Domain

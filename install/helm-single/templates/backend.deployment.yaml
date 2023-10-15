@@ -23,7 +23,7 @@ spec:
           image: {{.Values.Backend.Image}}
           imagePullPolicy: IfNotPresent
           volumeMounts:
-            - mountPath: /Users/zhiye/data/file
+            - mountPath: /data/file
               name: file-volume
             - mountPath: /root/.hydro
               name: backend-volume
