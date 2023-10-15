@@ -27,7 +27,7 @@
     </div>
     <div class="medium-3 columns">
       {% if handler.user.hasPriv(PRIV.PRIV_USER_PROFILE) %}
-        <div class="section side nojs--hide sidebar-edit">
+        <div class="section side nojs--hide">
           <ol class="menu">
             <a href="javascript:;" class="menu__link edit-mode-hide" name="enter-edit-mode">
               <span class="icon icon-edit"></span>
@@ -63,7 +63,7 @@
         </div>
       {% endif %}
       {% if handler.user.hasPerm(perm.PERM_CREATE_PROBLEM) %}
-        <div class="section side sidebar-create">
+        <div class="section side">
           <div class="section__header">
             <h1 class="section__title">{{ _('Create Problem') }}</h1>
           </div>
@@ -82,7 +82,7 @@
           </div>
         </div>
       {% endif %}
-      <div class="section side sidebar-category">
+      <div class="section side sidebar">
         <div class="section__header edit-mode-hide">
           <h1 class="section__title title-style">{{ _('Categories') }}</h1>
         </div>
