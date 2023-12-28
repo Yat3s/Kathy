@@ -147,7 +147,7 @@ export class HandlerCommon {
     }
 
     renderTitle(str: string) {
-        const name = "Kathy";
+        const name = "QINGYA";
         if (this.UiContext.extraTitleContent) return `${this.translate(str)} - ${this.UiContext.extraTitleContent} - ${name}`;
         return `${this.translate(str)} - ${name}`;
     }
