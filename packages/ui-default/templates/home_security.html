@@ -11,7 +11,31 @@
       </div>
     </div>
   {% endif %}
-  <div class="medium-6 columns">
+    <div class="medium-6 columns">
+    <div class="section">
+      <div class="section__header">
+        <h1 class="section__title" id="email" data-heading>{{ _('Change Password') }}</h1>
+      </div>
+      <div class="section__body">
+        <form method="post">
+          {{ form.form_text({
+               type:'text',
+               label:'Current Email',
+               columns:10,
+               name:'currentEmail',
+               value:handler.user.mail,
+               disabled:true
+             }) }}
+          <div class="row"><div class="columns">
+            <a href="http://localhost:3000/security?email={{ handler.user.mail | urlencode }}" class="rounded primary button text-center flex items-center justify-center">
+                {{ _('Change Password') }}
+            </a>
+          </div></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {# <div class="medium-6 columns">
     <div class="section">
       <div class="section__header">
         <h1 class="section__title" id="email" data-heading>{{ _('Change Email') }}</h1>
@@ -83,7 +107,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> #}
 </div>
 <div class="row nojs--hide">
   <div class="columns">
