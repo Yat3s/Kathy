@@ -8,7 +8,7 @@ pkgs.stdenv.mkDerivation {
   unpackPhase = "ls $src";
 
   meta = {
-    description = "Kathy";
+    description = "QINGYA";
     homepage = https://hydro.js.org/;
     maintainers = [ "undefined <i@undefined.moe>" ];
     platforms = [ "x86_64-linux" ];
