@@ -11,6 +11,8 @@ import Toolbar, {
   ToolbarSplitComponent as ToolbarSplit,
 } from './ToolbarComponent';
 
+const desiredLangs = ['cc.cc14', 'py.py3', 'java', 'pas', 'php']
+
 const mapStateToProps = (state) => ({
   pretestVisible: state.ui.pretest.visible,
   recordsVisible: state.ui.records.visible,
@@ -155,9 +157,12 @@ export default connect(mapStateToProps, mapDispatchToProps)(class ScratchpadTool
             value={this.props.editorLang}
             onChange={(ev) => this.props.setEditorLanguage(ev.target.value)}
           >
-            {_.map(availableLangs, (val, key) => (
-              <option value={key} key={key}>{val.display}</option>
-            ))}
+           {_.map(availableLangs, (val, key) => {
+            if (desiredLangs.includes(key)) {
+                return <option value={key} key={key}>{val.display}</option>;
+            }
+            return null;
+        })}
           </select>
         </ToolbarItem>
         <ToolbarSplit />
